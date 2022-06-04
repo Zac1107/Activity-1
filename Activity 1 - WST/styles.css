@@ -1,0 +1,190 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+
+.container{
+    margin: auto;
+    max-width: 40rem;  /* 1rem = 16px */
+    margin-top: 4rem;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.form{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.form input{
+    width: 80%;
+    height: 3rem;
+}
+
+.form button{
+    width: 20%;
+    height: 4rem;
+    border: none;
+    background-color: #3A69E3;
+    color: white;
+    margin-left: 5px;
+    border-radius: 4px;
+}
+
+.form{
+    height: 52px;
+    padding: 0 25px;
+    position: relative;
+}
+.form input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: 18px;
+    border-radius: 5px;
+    padding: 0 20px 0 53px;
+    border: 1px solid #999;
+}
+.form input:focus,
+.form input.active{
+    padding-left: 52px;
+    border: 2px solid #3C87FF;
+}
+.form input::placeholder{
+    color: #bfbfbf;
+}
+
+.controls, li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.controls{
+    padding: 18px 25px;
+    border-bottom: 1px solid #ccc;
+}
+
+.filters span{
+    margin: 0 8px;
+    font-size: 17px;
+    color: #444444;
+    cursor: pointer;
+}
+
+.filters span.border{
+    user-select:none;
+    cursor:default;
+}
+
+.filters span:first-child{
+    margin-left: 0;
+}
+
+.filters span.active{
+    color: #3C87FF;
+}
+
+.controls .clear-btn{
+    border: none;
+    opacity: 0.6;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 13px;
+    padding: 7px 13px;
+    border-radius: 4px;
+    letter-spacing: 0.3px;
+    pointer-events: none;
+    transition: transform 0.25s ease;
+    background: linear-gradient(135deg, #1798fb 0%, #2D5CFE 100%);
+}
+
+.clear-btn.active{
+    opacity: 0.9;
+    pointer-events: auto;
+}
+
+.clear-btn:active{
+    transform: scale(0.93);
+}
+
+.todo-container{
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background: linear-gradient(90deg, #1798fb 0%, #2D5CFE 100%);;
+}
+
+.todo-container ul li{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.3rem;
+    background-color: #e6f1f8;
+    margin: .5rem;
+    padding: .5rem;
+    font-size: 1.4rem;;
+}
+
+.todo-container ul li button#delete{
+    color: #FF0000;
+    border: none;
+    background-color: transparent;
+    padding: .5rem 1rem;
+    font-size: 1.4rem;
+}
+
+.todo-container ul li button#edit{
+    color: #376cff;
+    border: none;
+    background-color: transparent;
+    padding: .5rem 1rem;
+    font-size: 1.4rem;
+}
+
+.todo-container ul li button:last-child{
+    color: #80C848;
+    border: none;
+    background-color: transparent;
+    padding: .5rem 1rem;
+    font-size: 1.4rem;
+}
+
+.todo-list {
+    list-style: none;
+}
+
+.empty-state {
+    margin-top: 5rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+  
+.checklist-icon {
+    margin-bottom: 20px;
+}
+  
+.empty-state__title, .empty-state__description {
+    margin-bottom: 20px;
+}
+
+.unmark-done{
+    opacity: 40%;
+}
+
+.todo-list:empty {
+    display: none;
+}
+  
+.todo-list:empty + .empty-state {
+    display: flex;
+}

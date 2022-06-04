@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>My Todo List</h1>
+
+        <div class="form">
+            <input type="text" placeholder="Add a new task">
+            <button class="add-todo-btn">Add</button>        
+        </div>
+
+        <div class="controls">
+            <div class="filters">
+              <span class="active" id="all">All</span>
+              <span class="border">|</span>
+              <span id="pending">Pending</span>
+              <span class="border">|</span>
+              <span id="completed">Completed</span>
+            </div>
+            <button class="clear-btn">Clear All</button>
+          </div>
+
+        <div class="todo-container">
+            <ul class="todo-list"></ul>        
+        </div>     
+        <div class ="empty-state">
+            <img class="checklist-icon" src ="pnf.gif" width =50% height="50%">
+              <h2 class="empty-state__title"><i>"Ferb, I know what we're gonna do today!"</i></h2>
+              <p class="empty-state__description"><i>Start adding something to do.</i></p>
+        </div>   
+    </div>
+
+
+    <script src="./app.js"></script>
+
+</body>
+</html>
